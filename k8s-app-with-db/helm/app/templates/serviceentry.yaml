@@ -1,0 +1,14 @@
+
+apiVersion: networking.istio.io/v1beta1
+kind: ServiceEntry
+metadata:
+  name: rds-external
+spec:
+  hosts:
+    - {{ .Values.database.host }}
+  location: MESH_EXTERNAL
+  ports:
+    - number: 5432
+      name: tcp
+      protocol: TCP
+  resolution: DNS

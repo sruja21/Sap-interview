@@ -1,0 +1,12 @@
+
+replicaCount: 2
+
+image:
+  repository: nginx
+  tag: latest
+
+database:
+  host: ""
+  port: 5432
+  user: appuser
+  password: ""
